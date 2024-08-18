@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo/style_2.css">
+    <link rel="shortcut icon" href="imagens/logo_1.jpg" type="image/x-icon">
+    <title>Inscrição e denuncia</title>
+</head>
+
+<body>
+
+    <nav>
+        <a href="#"><img src="imagens/logo_2.jpg" alt="Logo"></a>
+        <div class="navigation">
+            <ul id="menu-ul">
+                <li><a href="index.html">Página Principal</a></li>
+                <li><a href="about.html">Sobre Nós</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <img src="imagens/big.jpg">
+        <form action="fazerLogin.php" id="mainForm" method="post" novalidate>
+            <h2>Relatório</h2>
+            <div class="form-control" id="emailDiv">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" placeholder="Digita seu email " autocomplete="off" value="">
+                <i class="icon"></i>
+            </div>
+
+            <div class="form-control" style="display: none;" id="phoneDiv">
+                <label for="phone">Telefone</label>
+                <input type="tel" name="phone" id="phone" placeholder="Digita seu telefone" autocomplete="off" value="">
+                <i class="icon"></i>
+            </div>
+            <input type=" checkbox" id="entrarEmail"> <label for="entrarEmail">Entrar com Telefone</label>
+            <div class="form-control">
+                <label for="password">Palavra-passe</label>
+                <input type="password" name="senha" id="password" placeholder="Digita sua Palavra-passe"
+                    autocomplete="off">
+                <i class="icon"></i>
+            </div>
+            <button type="submit">Submeter Relato</button><br>
+            <p>Se ainda não tem conta <a href="inscrever.html">clique aqui</a></p>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('entrarEmail').addEventListener('change', function() {
+            if (this.checked) {
+                document.getElementById('emailDiv').style.display = 'none';
+                document.getElementById('phoneDiv').style.display = 'block';
+            } else {
+                document.getElementById('emailDiv').style.display = 'block';
+                document.getElementById('phoneDiv').style.display = 'none';
+            }
+        });
+        </script>
+</body>
+
+</html>
